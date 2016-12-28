@@ -1,19 +1,16 @@
 {
-  "author": "Matthew Sadler <mat@sourcetagsandcodes.com>",
-  "name": "path-template",
+  "author": "Ryo Hashiguchi",
+  "name": "@ryo33/path-template",
   "description": "Match and build paths from rails/sinatra-style url path templates.",
-  "version": "0.0.0",
-  "homepage": "https://github.com/matsadler/path-template",
+  "version": "1.0.1",
+  "homepage": "https://github.com/ryo33/path-template",
   "repository": {
     "type": "git",
-    "url": "git://github.com/matsadler/path-template.git"
+    "url": "git@github.com:ryo33/path-template.git"
   },
-  "main": "index",
+  "main": "index.js",
   "scripts": {
     "test": "node test/runner.js"
-  },
-  "engines": {
-    "node": "~0.6.6"
   },
   "dependencies": {},
   "devDependencies": {

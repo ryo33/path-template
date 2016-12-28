@@ -45,19 +45,6 @@ containing the parameters found in the path, otherwise returns `undefined`.
     PathTemplate.match(template, "/users/1");    // => {userID: "1"}
     PathTemplate.match(template, "/photos/1");   // => undefined
 
-An array of templates can be given as the first argument, in which case a match
-object will be returned if any of the templates match. The match object will
-have a `template` property referencing the template with which the path matched.
-
-    var user = PathTemplate.parse("/users/:userID"),
-        photo = PathTemplate.parse("/photos/:photoID"),
-        templates = [user, photo];
-    
-    var match = PathTemplate.match(templates, "/users/1");
-    match;                                  // => {userID: "1"}
-    PathTemplate.inspect(match.template);   // => "/users/:userID"
-    user === match.template;                // => true
-
 ### PathTemplate.add(template, string)
 
 Returns a new path template by appending the path described by string.
@@ -136,27 +123,3 @@ additionally `/` and `.` will start a new segment.
      |   matched for the match to be successful
      |
      Starts a segment, matching "/foo"
-
-## Licence
-
-(The MIT License)
-
-Copyright (c) 2012 Matthew Sadler
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
