@@ -1,14 +1,14 @@
-# Path Template
+# @ryo33/path-template
 
 Match and build paths from rails/sinatra-style url path templates.
 
 ## Installation
 
-    npm install path-template
+    npm install --save @ryo33/path-template
 
 ## Usage
 
-    var PathTemplate = require("path-template");
+    var PathTemplate = require("@ryo33/path-template");
 
 ### PathTemplate.parse(string)
 
